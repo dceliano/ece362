@@ -1,0 +1,39 @@
+also, change original pbvalue to 1 (since high)!
+
+From: Dominic Celiano <d.celiano@yahoo.com>
+To: Dominic Celiano <d.celiano@yahoo.com> 
+Sent: Thursday, October 8, 2015 10:33 PM
+Subject: lab 6
+
+MODULE lab6
+
+TITLE 'Lab_6_ECE_362'
+
+DECLARATIONS
+D0..D3 pin 4..7; "Input
+!a, !b, !c, !d, !e, !f, !g pin 16..22 istype 'com'; "output
+!IRQ pin 23 istype 'reg invert';
+clk pin 1;
+clr pin 8;
+ten pin 2;
+dp pin 3;
+
+TRUTH_TABLE ([D3,D2,D1,D0]->[a, b, c, d, e, f, g])
+	     [ 0, 0, 0, 0]->[1, 1, 1, 1, 1, 1, 0];
+	     [ 0, 0, 0, 1]->[0, 1, 1, 0, 0, 0, 0];
+	     [ 0, 0, 1, 0]->[1, 1, 0, 1, 1, 0, 1];
+	     [ 0, 0, 1, 1]->[1, 1, 1, 1, 0, 0, 1];
+	     [ 0, 1, 0, 0]->[0, 1, 1, 0, 0, 1, 1];
+	     [ 0, 1, 0, 1]->[1, 0, 1, 1, 0, 1, 1];
+	     [ 0, 1, 1, 0]->[0, 0, 1, 1, 1, 1, 0];
+	     [ 0, 1, 1, 1]->[1, 1, 1, 0, 0, 0, 0];
+	     [ 1, 0, 0, 0]->[1, 1, 1, 1, 1, 1, 1];
+	     [ 1, 0, 0, 1]->[1, 1, 1, 0, 0, 1, 1];
+
+EQUATIONS
+
+IRQ.D = 1;
+IRQ.CLK = clk;
+IRQ.AR = clrpn;
+
+END

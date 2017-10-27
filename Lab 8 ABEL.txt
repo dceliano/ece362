@@ -1,0 +1,13 @@
+MODULE Lab8_ABEL
+
+TITLE '8-bit Shift Register'
+DECLARATIONS
+clock pin 1;
+serial_in pin 2;
+q0..q7 pin 14..21 istype 'reg'; "active-high
+EQUATIONS
+[q1..q7] := [q0..q6];
+q0 := serial_in;
+[q0..q7].clk = clock;
+
+END 
