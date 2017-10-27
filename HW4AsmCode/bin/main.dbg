@@ -1,0 +1,16 @@
+; ECE 362 HW 4 - Fall 2014
+
+; Name: < Dominic Celiano >
+
+; #7. Pass it a memory location and a modulus, and it will return (memory location) + 1 % modulus
+imodb		MACRO
+		inc memb
+		ldx memb
+		clra
+		ldab #10 ; modulus value passed in
+		idiv ; remainder stored in D
+		stab memb
+		ENDM
+		
+memb rmb 1
+
