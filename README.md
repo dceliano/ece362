@@ -1,4 +1,6 @@
-This repo contains all the files I found in the ece362 folder on my Google Drive. I don't think it contains all the files from all the labs I did (because they were stored on Purdue's internal network), but it might. It is worth noting that all the labs were done using CodeWarrior (for the assembly and C files) and ispLEVER for ABEL files (.abl), which are similar to VHDL or Verilog files.
+This repo contains all the files from my work in ECE362 at Purdue.
+
+It is worth noting that all the labs were done using CodeWarrior (for the assembly and C files) and ispLEVER for ABEL files (.abl), which are similar to VHDL or Verilog files.
 
 The people I worked with on the final project were:
 	John Mahony (jpmahonyiv@gmail.com)
